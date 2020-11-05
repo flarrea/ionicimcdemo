@@ -12,7 +12,7 @@ pool:
 
 # Specific variables to use, in our case it is just one and at the pipeline level 
 variables:
-  chromeDriverVersion: '86.0.4240.22'
+  chromeDriverVersion: '80.0.3987.106'
 
 # Specifies a linear sequence of operations that make up a job
 # We need only one job, so we can use the simplified structure
