@@ -8,7 +8,7 @@ pr:
 # Specifies which pool (Hosted or Self-hosted) to use for this pipeline. 
 # In this case it is in the scope of the pipeline, but you can use it at the stage or job level
 pool:
-  vmImage: 'ubuntu-18.04'
+  vmImage: 'ubuntu-18.04.5'
 
 # Specific variables to use, in our case it is just one and at the pipeline level 
 variables:
