@@ -41,10 +41,6 @@ steps:
   - script: |
              node node_modules/.bin/webdriver-manager update  --gecko false --standalone false
 
-  - script: | # Run e2e tests without update webdriver
-      npx --no-install ng e2e --webdriverUpdate=true
-    displayName: 'ng e2e tests'
-
   - task: PublishTestResults@2 # Publish tests results
     displayName: 'Publishing test results'
     condition: succeededOrFailed()
