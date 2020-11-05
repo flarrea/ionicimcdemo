@@ -1,0 +1,7 @@
+{
+  "name": "ionicIMCDemo",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
