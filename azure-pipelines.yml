@@ -12,7 +12,7 @@ pool:
 
 # Specific variables to use, in our case it is just one and at the pipeline level 
 #variables:
-#  chromeDriverVersion: '80.0.3987.106'
+  chromeDriverVersion: '80.0.3987.106'
 
 # Specifies a linear sequence of operations that make up a job
 # We need only one job, so we can use the simplified structure
@@ -40,9 +40,8 @@ steps:
 # In this case I installed a specific version of chromedriver to avoid errors with the version of Chrome in the hosted agent microsoft, see the troubleshooting topic.
   - script: |
             webdriver-manager clean
-            node node_modules/protractor/bin/webdriver-manager update --standalone --versions.standalone=3.8.0
-#node node_modules/.bin/webdriver-manager update --versions.chrome=$(chromeDriverVersion) --gecko false --standalone false
-#displayName: 'changing version of chromedriver to $(chromeDriverVersion)'
+            node node_modules/.bin/webdriver-manager update --versions.chrome=$(chromeDriverVersion) --gecko false --standalone false
+            displayName: 'changing version of chromedriver to $(chromeDriverVersion)'
 
 
   - script: | # Run e2e tests without update webdriver
