@@ -7,7 +7,7 @@ pool:
 
 steps:
 # This task trigger a new build to run, this build is the same as the step above that generates the bundle
-- task: TriggerBuild@3
+- task: DotNetCoreCLI@2
   displayName: 'trigger App Build CI'
   inputs:
     definitionIsInCurrentTeamProject: true
@@ -18,6 +18,9 @@ steps:
     useCustomSourceVersion: false
     useSameBranch: true
     waitForQueuedBuildsToFinish: true
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
     waitForQueuedBuildsToFinishRefreshTime: '10'
     failTaskIfBuildsNotSuccessful: true
     cancelBuildsIfAnyFails: false
