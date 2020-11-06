@@ -37,7 +37,7 @@ steps:
   displayName: 'download artifact App Build CI'
   inputs:
     buildType: 'specific'
-    project: 'Ionic App'
+    project: 'ionicIMCDemo'
     definition: 'App Build CI'
     specificBuildWithTriggering: true
     buildVersionToDownload: 'specific'
