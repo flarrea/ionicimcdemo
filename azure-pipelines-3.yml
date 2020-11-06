@@ -67,7 +67,7 @@ steps:
   displayName: 'android signing'
   inputs:
     apkFiles: '**/outputs/apk/release/app*.apk'
-    apksignerKeystoreFile: 'sampleapp.keystore'
+    apksignerKeystoreFile: 'cetus.keystore'
 # This password is placed in Variables inside the pipeline and the option to keep the value secret is checked.
     apksignerKeystorePassword: '$(password_keystore)'
     apksignerKeystoreAlias: 'cetus'
