@@ -70,7 +70,7 @@ steps:
     apksignerKeystoreFile: 'sampleapp.keystore'
 # This password is placed in Variables inside the pipeline and the option to keep the value secret is checked.
     apksignerKeystorePassword: '$(password_keystore)'
-    apksignerKeystoreAlias: 'sampleapp'
+    apksignerKeystoreAlias: 'cetus'
 
 - task: CopyFiles@2 # Copies all .apk files to publish
   displayName: 'copy **/outputs/apk/release/app*.apk to $(Build.BinariesDirectory)'
